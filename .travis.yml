@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project eighth-breaker-277011
   - gcloud config set compute/zone us-central1-c
-  - gcloud container clusters get-credentials k8stest,
+  - gcloud container clusters get-credentials k8stest
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t hsynbykts/react-test -f ./client/Dockerfile.dev ./client
 
